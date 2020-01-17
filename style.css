@@ -37,7 +37,7 @@ header nav a {
     text-decoration: none;
     color: white;
     width: 20%;
-    border: 1px solid white;    
+    border: 1px solid #ebebeb;   
 }
 
 .home {
@@ -59,4 +59,96 @@ header nav a {
 .home .intro {
     display: flex;
     justify-content: center;
+}
+
+.plan {
+    display: flex;
+    background-color: #232323;
+    color: white;
+}
+
+.plan h3 {
+    color: #54be90;
+}
+
+.plan .item {
+    overflow: hidden;
+    padding: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.plan .circle {
+    width: 125px;
+    height: 125px;
+    background-color: #ebebeb;
+    position: absolute;
+    top: -70px;
+    border-radius: 50%;
+}
+
+.plan div p {
+    display: flex;
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills h2 {
+    color: #54be90;
+    align-self: center;
+}
+
+.skills .table {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills .item {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0.2em 0;
+}
+
+.skills .item .skill {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #232323;
+    width: 100px;
+}
+
+.skills .item .bar {
+    background-color: #54be90;
+}
+
+.skills .item .padding {
+    background-color: lightgrey;
+}
+
+.skills .item .number {
+    color: grey;
+    background-color: lightgrey;
+}
+
+.skills .item .bar {
+    flex-basis: 0;
+}
+
+.skills .item .padding {
+    flex-basis: 0;
+}
+
+
+.skills .html .bar {
+    flex-grow: 80;
+}
+
+.skills .html .padding {
+    flex-grow: 20;
 }
