@@ -1,0 +1,253 @@
+@import 'colors';
+@import 'sizes';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: $primary_background;
+    padding: 0 15% 0 15%;
+}
+
+header {
+    display: flex;
+    background-color: $fifth_background;
+    padding-bottom: 4em;
+
+    .logo {
+        width: 17%;
+
+        img {
+            width: 3em;
+        }
+    }
+
+    nav {
+        display: flex;
+        flex-grow: 1;
+
+        a {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $tertiary_background;
+            text-decoration: none;
+            color: $secondary_text;
+            width: 20%;
+            border: 1px solid $fifth_background;   
+        }
+    }
+}
+
+.home {
+    display: relative;
+
+    img {
+        width: 100%;
+    }
+
+    .greeting {
+        position: absolute;
+        top: 20%;
+        right: 20%;
+        color: $secondary_text;
+        z-index: 1;
+    }
+
+    .intro {
+        text-align: center;
+        padding: 3em;
+    }
+}
+
+.plan {
+    display: flex;
+    background-color: $tertiary_background;
+    color: $secondary_text;
+
+    h3 {
+        color: $tertiary_text;
+    }
+
+    .item {
+        overflow: hidden;
+        padding: 5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .circle {
+        width: 125px;
+        height: 125px;
+        background-color: $primary_background;
+        position: absolute;
+        top: -70px;
+        border-radius: 50%;
+    }
+
+    div p {
+        display: flex;
+        text-align: center;
+    }
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    background-color: $fifth_background;
+
+    h2 {
+        color: $tertiary_text;
+        align-self: center;
+        padding-bottom: 1em;
+    }
+
+    .table {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 0.5em;
+    }
+
+    .skill {
+        display: flex;
+        justify-content: center;
+        color: $secondary_text;
+        background-color: $tertiary_background;
+        width: 100px;
+    }
+
+    .bar {
+        background-color: $secondary_background;
+        flex-basis: 0;
+    }
+    
+    .padding {
+        background-color: $sixth_background;
+        flex-basis: 0;
+    }
+    
+    .number {
+        color: $fourth_text;
+        background-color: $sixth_background;
+    }
+
+    .html {
+        .bar { flex-grow: 80; }
+        .padding { flex-grow: 20; }
+    }
+
+    .css {
+        .bar { flex-grow: 80; }
+        .padding { flex-grow: 20; }
+    }
+    
+    .javascript {
+        .bar { flex-grow: 70; }
+        .padding { flex-grow: 30; }
+    }
+    
+    .react {
+        .bar { flex-grow: 60; }
+        .padding { flex-grow: 30; }
+    } 
+    
+    .jquery {
+        .bar { flex-grow: 70; }
+        .padding { flex-grow: 30; }
+    } 
+       
+    .php {
+        .bar { flex-grow: 60; }
+        .padding { flex-grow: 40; }
+    }
+    
+    .laravel {
+        .bar { flex-grow: 60; }
+        .padding { flex-grow: 40; }
+    } 
+    
+    .ux {
+        .bar { flex-grow: 50; }
+        .padding { flex-grow: 50; }
+    }
+}
+
+.portfolio {
+    background-color: $secondary_background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        color: $secondary_text;
+        padding: 2em;
+    }
+
+    .projects {
+        padding: 0 5em 5em 5em;    
+        display: flex;
+    }
+}
+
+.about_me {
+
+    h2 {
+        text-align: center;
+        padding: 2em;
+    }
+    
+    .info {
+        display: flex;
+        padding-bottom: 3em;
+    }
+    
+    img {
+        width: 50%;
+    }
+    
+    .text {
+        width: 50%;
+    }
+    
+    .find {
+        background-color: $fourth_background;
+        color: $secondary_text;
+        text-align: center;
+        padding: 2em 0 5em 0;
+
+        img {
+            width: 100px;
+            margin: 0 3em;
+        }
+    }
+    
+    .links {
+        display: flex;
+        justify-content: center;
+    }    
+}
+
+.contact {
+    background-color: $secondary_background;
+    color: $secondary_text;
+    text-align: center;
+    padding: 3em 0 5em 0;
+}
+
+footer {
+    text-align: center;
+    padding: 5em;
+}
