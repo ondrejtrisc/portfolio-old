@@ -245,13 +245,19 @@
 
             <h2>CONTACT ME</h2>
 
-            <form action="">
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Phone">
-                <input type="text" placeholder="My message">
-                <button type="submit">Send my message</button>
+            <form action="" method="post">
+                <div class="line">
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                </div>
+                <div class="line">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Phone">
+                </div>
+                <label for="message">My message
+                    <textarea name="" id="message" cols="100" rows="10"></textarea>
+                </label>
+                <input type="submit" value="Send my message">
             </form>
         </section>
     </main>
