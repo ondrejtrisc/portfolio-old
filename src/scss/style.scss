@@ -7,23 +7,35 @@
 
 body {
     margin: 0;
-    display: flex;
-    flex-direction: column;
     background-color: $primary_background;
-    padding: 0 15% 0 15%;
+    font-family: 'Roboto', sans-serif;;
+
+    @media (min-width: $small) {
+        margin: 0 5% 0 5%;
+    }
+
+    @media (min-width: $medium) {
+        margin: 0 10% 0 10%;
+    } 
+
+    @media (min-width: $large) {
+        margin: 0 15% 0 15%;
+    }    
 }
 
-header {
+.header {
     display: flex;
     background-color: $fifth_background;
-    padding-bottom: 4em;
+    padding-bottom: 4rem;
 
-    .logo {
-        width: 17%;
-
-        img {
-            width: 3em;
+    @media (min-width: $small) {
+        &__logo {
+            width: 17%;
         }
+    }
+
+    img {
+        width: 3em;
     }
 
     nav {
@@ -33,8 +45,8 @@ header {
         a {
             flex-grow: 1;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             background-color: $tertiary_background;
             text-decoration: none;
             color: $secondary_text;
@@ -53,55 +65,78 @@ header {
 
     .greeting {
         position: absolute;
-        top: 20%;
+        top: 18%;
         right: 20%;
+
         color: $secondary_text;
         z-index: 1;
+        text-align: right;
+
+        h1 {
+            font-size: 1.7rem;
+        }
     }
 
     .intro {
         text-align: center;
         padding: 3em;
+
+        .bold {
+            font-weight: bold;
+        }
     }
 }
 
 .plan {
-    display: flex;
     background-color: $tertiary_background;
     color: $secondary_text;
+    display: flex;
+
+    @media (max-width: $small) {
+        flex-direction: column;
+        padding-bottom: 4rem;
+    }
 
     h3 {
         color: $tertiary_text;
     }
 
-    .item {
+    .step {
         overflow: hidden;
-        padding: 5em;
+        padding: 2rem 10rem 0;
+        @media (min-width: $small) {
+            padding: 5rem 3rem;
+        }
         display: flex;
         flex-direction: column;
         align-items: center;
         position: relative;
-    }
 
-    .circle {
-        width: 125px;
-        height: 125px;
-        background-color: $primary_background;
-        position: absolute;
-        top: -70px;
-        border-radius: 50%;
-    }
+        &__circle {
 
-    div p {
-        display: flex;
-        text-align: center;
+            @media (max-width: 900px) {
+                display: none;
+            }
+    
+            width: 125px;
+            height: 125px;
+            background-color: $primary_background;
+            position: absolute;
+            top: -70px;
+            border-radius: 50%;
+        }
+
+        &__text {
+            display: flex;
+            text-align: center;
+        }
     }
 }
 
 .skills {
     display: flex;
     flex-direction: column;
-    padding: 3em;
+    padding: 3rem;
     background-color: $fifth_background;
 
     h2 {
@@ -127,6 +162,7 @@ header {
         color: $secondary_text;
         background-color: $tertiary_background;
         width: 100px;
+        padding: 0.5rem 0;
     }
 
     .bar {
@@ -142,6 +178,7 @@ header {
     .number {
         color: $fourth_text;
         background-color: $sixth_background;
+        padding: 0.5rem 0.5rem 0.5rem 0;
     }
 
     .html {
@@ -190,6 +227,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 3rem;
 
     h2 {
         color: $secondary_text;
@@ -197,7 +235,7 @@ header {
     }
 
     .projects {
-        padding: 0 5em 5em 5em;    
+        padding-bottom: 5rem;    
         display: flex;
     }
 }
@@ -288,6 +326,9 @@ header {
 
             textarea {
                 margin-top: 0.5em;
+                &:focus {
+                    outline: none;
+                }
             }
         }
 
